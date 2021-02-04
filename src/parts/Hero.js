@@ -22,8 +22,8 @@ export default function Hero(props) {
             <div className="row align-items-center">
                 <div className="col-auto pr-5" style={{ width: 530 }}>
                     <h1 className="font-weight-bold line-height-1 mb-3">
-                        Forget Busy Work, <br/>
-                        Start Next Vacation
+                        Forget Busy work and Covid, <br/>
+                        Start Next Vacation !
                     </h1>
                     <p className="mb-4 font-weight-light text-gray-500 w-75" style={{lineHeight:"170%"}}>
                     We provide what you need to enjoy your 
