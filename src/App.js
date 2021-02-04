@@ -1,24 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'assets/scss/style.scss';
+import Landingpage from 'pages/LandingPage';
+import DetailsPage from 'pages/DetailsPage';
+import Checkout from 'pages/Checkout';
+// import NotFound from "pages/404";
+// import Example from 'pages/Example';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Router>
+     <Route exact path="/" component={Landingpage} />
+     <Route exact path="/properties/:id" component={DetailsPage} />
+     <Route exact path="/checkout" component={Checkout} />
+     {/* <Route path="*" component={NotFound} /> */}
+       {/* <Route path="/" component={Example}></Route> */}
+     </Router>
+     <ToastContainer></ToastContainer>
     </div>
   );
 }
